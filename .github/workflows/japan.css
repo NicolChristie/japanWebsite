@@ -1,0 +1,209 @@
+body{ 
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: black;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color:pink;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: red;
+  color: white;
+}
+
+.topnav .icon {
+  display: square;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+/* Dropdown container (inside topnav) */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button (like a normal link) */
+.dropdown .dropbtn {
+  font-size: 17px;
+  border: none;
+  outline: none;
+  color: #f2f2f2;
+  padding: 14px 16px;
+  background-color: inherit; /* match topnav */
+  font-family: inherit; /* inherit font */
+  margin: 0;
+  cursor: pointer;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.3);
+  z-index: 1;
+}
+
+/* Dropdown links */
+.dropdown-content a {
+  float: none;
+  color: #f2f2f2;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Hover effects */
+.dropdown-content a:hover {
+  background-color: pink;
+  color: black;
+}
+
+/* Show the dropdown when hovered */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the color of dropdown button when active */
+.dropdown:hover .dropbtn {
+  background-color: red;
+  color: white;
+}
+
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+        button {
+  border: none;
+  padding: 4px 50px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+ 
+}
+        
+.button1 {
+  background-color: darkorange; 
+  color: blue; 
+  border: 2px solid #FF4500;
+}
+        .button1:hover {
+  background-color: pink;
+  color: white;
+}
+.button2 {
+  background-color: darkorange; 
+  color: blue; 
+  border: 2px solid #FF4500;
+}
+        .button2:hover {
+  background-color: orange;
+  color:white;
+}
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url("websiteBackground.png"); /* your image file */
+  background-size: cover;                  /* make it fill the screen */
+  background-position: top;             /* center the image */
+  background-repeat: no-repeat;            /* prevent tiling */
+  background-attachment: fixed;            /* make it stay while scrolling (optional) */
+}
+
+h1 {
+  color: black;
+  font-family: Andale mono, monospace;
+  text-align: center;
+  font-size: 50px;
+}
+
+h2 {
+  color: black;
+  font-family: Andale Mono, monospace;
+  font-size: 20px;
+}
+  h3 {
+      color: black;
+  font-family: Andale Mono, monospace;
+  font-size: 20px;
+}
+   h4 {
+       color: white;
+  font-family: Andale Mono, monospace;
+  font-size: 20px;
+}
+   ul {
+       color: white;
+  font-family: Andale Mono, monospace;
+  font-size: 20px;
+}
+   ol {
+       color: white;
+  font-family: Andale Mono, monospace;
+  font-size: 20px
+        }
+      p  {
+          color: black;
+  font-family: Andale Mono, monospace;
+  font-size: 20px; 
+}
+         a {
+       color: black;
+  font-family: Andale Mono, monospace;
+  font-size: 20px;
+  text-decoration: none;
+        }
+        a:hover {
+  text-decoration: underline;
+  color: darkred;
+}
+        
+div.a {
+  text-align: center;
+}
+
+div.b {
+  text-align: left;
+}
+
+div.c {
+  text-align: right;
+} 
