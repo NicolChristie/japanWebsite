@@ -152,31 +152,41 @@ h1 {
   color: black;
   font-family: Andale mono, monospace;
   text-align: center;
-  font-size: 50px;
+  font-size: 80px;
 }
 
 h2 {
   color: black;
   font-family: Andale Mono, monospace;
-  font-size: 20px;
+  font-size: 50px;
 }
   h3 {
       color: black;
   font-family: Andale Mono, monospace;
-  font-size: 20px;
+  font-size: 30px;
 }
    h4 {
-       color: white;
+  color: black;
   font-family: Andale Mono, monospace;
   font-size: 20px;
+  text-align: left;
+}
+
+  h5 {
+  color: black;
+  font-family: Andale Mono, monospace;
+  font-size: 20px;
+  text-align: center;
+  margin-top: -40px;
 }
    ul {
-       color: white;
+       color: black;
   font-family: Andale Mono, monospace;
   font-size: 20px;
+  margin-top: -20px;
 }
    ol {
-       color: white;
+       color: gray;
   font-family: Andale Mono, monospace;
   font-size: 20px
         }
@@ -197,13 +207,26 @@ h2 {
 }
         
 div.a {
+  text-align: left;
+  text-indent: 20px;
+}
+
+div.b{
   text-align: center;
 }
-
-div.b {
-  text-align: left;
+.itinerary-container {
+  display: flex;           /* make children appear in a row */
+  align-items: flex-start; /* aligns top edges */             /* space between list and image */
 }
 
-div.c {
-  text-align: right;
-} 
+.itinerary-list {
+  margin-left: 150px;
+  flex: 1;                 /* take available space */
+}
+
+.itinerary-image {
+  margin-top: 20px;
+  flex: 2;                 /* same width as list (or adjust) */
+}
+
+
