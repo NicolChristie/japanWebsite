@@ -55,7 +55,7 @@ body {
 }
 
 /* Dropdown inside navbar */
-.dropdown { float: left; overflow: hidden; }
+.dropdown { float: left; overflow: hidden; position: relative; }
 .dropdown .dropbtn {
   font-size: 17px;
   border: none;
