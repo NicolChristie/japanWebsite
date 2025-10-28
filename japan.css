@@ -143,7 +143,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   background-image: url("websiteBackground.png"); /* your image file */
   background-size: cover;                  /* make it fill the screen */
-  background-position: top;             /* center the image */
+  background-position: top right;             /* center the image */
   background-repeat: no-repeat;            /* prevent tiling */
   background-attachment: fixed;            /* make it stay while scrolling (optional) */
 }
@@ -184,12 +184,21 @@ h2 {
   font-family: Andale Mono, monospace;
   font-size: 20px;
   margin-top: -20px;
+  text-indent: 150px;
 }
    ol {
        color: gray;
   font-family: Andale Mono, monospace;
-  font-size: 20px
-        }
+  font-size: 20px;
+  text-indent: 150px;
+  }
+   li {
+       color: black;
+  font-family: Andale Mono, monospace;
+  font-size: 20px;
+  text-indent: 0px;
+}
+
       p  {
           color: black;
   font-family: Andale Mono, monospace;
@@ -200,7 +209,7 @@ h2 {
   font-family: Andale Mono, monospace;
   font-size: 20px;
   text-decoration: none;
-        }
+    }
         a:hover {
   text-decoration: underline;
   color: darkred;
@@ -208,25 +217,66 @@ h2 {
         
 div.a {
   text-align: left;
-  text-indent: 20px;
+  text-indent: 150px;
 }
 
 div.b{
   text-align: center;
 }
-.itinerary-container {
-  display: flex;           /* make children appear in a row */
-  align-items: flex-start; /* aligns top edges */             /* space between list and image */
+.content-container {
+  display: flex;
+  align-items: center;      /* centers image & text vertically */
+  justify-content: space-between;
+  gap: 20px;
+  width: 80%;
+  margin: 40px auto;
+}
+.content-container.card {
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 15px;
+  padding: 20px 40px;
+  margin: 40px auto;
+  width: 80%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(6px); /* optional frosted effect */
 }
 
-.itinerary-list {
+
+.content-list {
   margin-left: 150px;
   flex: 1;                 /* take available space */
 }
 
-.itinerary-image {
-  margin-top: 20px;
-  flex: 2;                 /* same width as list (or adjust) */
+.content-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  max-height: 500px;
+  object-fit: contain;
+}
+
+/* Makes all images responsive */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* removes small gaps below images */
+}
+
+/* Optional: keep image and text side-by-side on large screens */
+.itinerary-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Stack them vertically on small screens */
+@media (max-width: 700px) {
+  .content-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 }
 
 
