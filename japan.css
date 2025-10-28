@@ -175,20 +175,18 @@ a:hover { text-decoration: underline; color: darkred; }
    PHOTO GRID
    ======================= */
 .photo-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 20px;
+  column-count: 3;       /* number of columns */
+  column-gap: 20px;
   width: 80%;
   max-width: 1500px;
   margin: 40px auto;
 }
 
 .photo-grid img {
-  width: 100%;
-  height: auto;          /* keep aspect ratio */
-  object-fit: cover;     /* crop to fill evenly */
-  display: block;
+  width: 100%;           /* fit column width */
+  margin-bottom: 20px;   /* spacing between images vertically */
   border-radius: 10px;
+  display: block;
 }
 
 /* =======================
