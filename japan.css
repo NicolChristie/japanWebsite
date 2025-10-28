@@ -167,6 +167,7 @@ h3 {
   color: black;
   font-family: Andale Mono, monospace;
   font-size: 30px;
+  margin-left: 55px;
 }
 
 h4 {
@@ -233,9 +234,13 @@ div.b{
   text-align: center;
 }
 
+div.c{
+  text-align: left;
+}
+
 /* Content container (applies to card and normal) */
 .content-container,
-.content-container.card {
+.content-container.card,.content-container.grid {
   display: flex;
   align-items: center;      /* vertical centering */
   gap: 20px;                /* spacing between text and image */
@@ -246,27 +251,6 @@ div.b{
   box-sizing: border-box;
   justify-content: flex-start;  /* remove space-between to avoid extra horizontal gap */
 }
-
-/* Image container */
-.content-image {
-  display: flex;
-  justify-content: center; /* center inside container */
-  align-items: center;     /* vertical center */
-  flex: 0 0 auto;          /* don’t grow or shrink, size based on content */
-}
-
-/* Image itself */
-.content-image img {
-  max-width: 600px;        /* optional: maximum width */
-  width: 100%;             /* fill container width */
-  height: auto;
-  display: block;
-  border-radius: 10px;
-  margin: 0;
-}
-
-
-
 /* Card-specific styles */
 .content-container.card {
   background-color: rgba(255, 255, 255, 0.75);
@@ -280,6 +264,40 @@ div.b{
 .content-container.card.gray {
   background-color: rgba(100, 100, 100, 0.75);
 }
+
+.photo-grid {
+  column-count: 3;       /* number of columns */
+  column-gap: 20px;
+  width: 80%;
+  max-width: 1500px;
+  margin: 40px auto;
+}
+
+.photo-grid img {
+  width: 100%;           /* fit column width */
+  margin-bottom: 20px;   /* spacing between images vertically */
+  border-radius: 10px;
+  display: block;
+}
+
+/* Image container */
+.content-image {
+  display: flex;
+  justify-content: center; /* center inside container */
+  align-items: center;     /* vertical center */
+  flex: 0 0 auto;          /* don’t grow or shrink, size based on content */
+}
+
+/* Image itself */
+.content-image img {
+  max-width: 1000px;        /* optional: maximum width */
+  width: 100%;             /* fill container width */
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  margin: 0;
+}
+
 
 /* Text content */
 .content-list {
