@@ -241,9 +241,13 @@ div.b{
   backdrop-filter: blur(6px); /* optional frosted effect */
 }
 
+.content-container.card.gray {
+  background-color: rgba(100, 100, 100, 0.75);
+}
+
 
 .content-list {
-  margin-left: 150px;
+  margin-left: 0px;
   flex: 1;                 /* take available space */
 }
 
