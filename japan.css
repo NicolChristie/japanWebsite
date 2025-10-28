@@ -1,5 +1,4 @@
 body{ 
-  margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -7,6 +6,10 @@ body{
   overflow: hidden;
   background-color: black;
   position: fixed;
+  top: 0;           /* stick to top */
+  left: 0;          /* start from left edge */
+  width: 100%;      /* span full width */
+  z-index: 1000;    /* make sure it’s above other content */
 }
 
 .topnav a {
