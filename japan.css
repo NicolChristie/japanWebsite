@@ -168,7 +168,7 @@ div.c{margin-left: 200px;}
   backdrop-filter: blur(6px);
 }
 
-.content-container.card.gray { background-color: rgba(100,100,100,0.75); }
+.content-container.card.gray { background-color: rgba(136, 136, 136, 0.75); }
 
 .content-list { flex: 1; margin-left: 0; }
 
