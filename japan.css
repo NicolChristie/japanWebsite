@@ -46,16 +46,15 @@ body {
 }
 
 .topnav .icon {
-  display: square;
-}
-
-@media screen and (max-width: 600px) {
-  .topnav a:not(:first-child) { display: none; }
-  .topnav a.icon { float: right; display: block; }
+  display: none; /* ✅ fixed */
 }
 
 /* Dropdown inside navbar */
-.dropdown { float: left; overflow: hidden; position: relative; }
+.dropdown {
+  float: left;
+  position: relative;
+}
+
 .dropdown .dropbtn {
   font-size: 17px;
   border: none;
@@ -67,14 +66,18 @@ body {
   margin: 0;
   cursor: pointer;
 }
+
 .dropdown-content {
   display: none;
   position: absolute;
+  top: 100%; /* ✅ positions below button */
+  left: 0;
   background-color: #333;
   min-width: 160px;
   box-shadow: 0px 8px 16px rgba(0,0,0,0.3);
   z-index: 1001;
 }
+
 .dropdown-content a {
   float: none;
   color: #f2f2f2;
@@ -83,9 +86,20 @@ body {
   display: block;
   text-align: left;
 }
-.dropdown-content a:hover { background-color: pink; color: black; }
-.dropdown:hover .dropdown-content { display: block; }
-.dropdown:hover .dropbtn { background-color: red; color: white; }
+
+.dropdown-content a:hover {
+  background-color: pink;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block; /* ✅ hover now works */
+}
+
+.dropdown:hover .dropbtn {
+  background-color: red;
+  color: white;
+}
 
 /* =======================
    BUTTONS
