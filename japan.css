@@ -5,7 +5,7 @@ body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   padding-top: 60px; /* space for fixed navbar */
-  background-image: url("websiteBackground.png");
+  background-image: url("images/websiteBackground.png");
   background-size: cover;
   background-position: top right;
   background-repeat: no-repeat;
@@ -177,15 +177,16 @@ div.c{margin-left: 200px;}
   justify-content: center;
   align-items: center;
   flex: 0 0 auto;
+  width: 80%;
 }
 
+/* Default single image inside content-image */
 .content-image img {
   width: 100%;
   max-width: 1000px;
   height: auto;
-  display: block;
   border-radius: 10px;
-  margin: 0;
+  display: block;
 }
 
 /* =======================
@@ -201,11 +202,30 @@ div.c{margin-left: 200px;}
 
 .photo-grid img {
   width: 100%;           /* fit column width */
-  margin-bottom: 20px;   /* spacing between images vertically */
+  margin-bottom: 10px;   /* spacing between images vertically */
   border-radius: 10px;
   display: block;
 }
+.content-image:has(.photo-grid) {
+  flex: 0 0 45%;      /* take up less space */
+  max-width: 45%;
+}
 
+/* Photo grid inside content-image (same layout as main photo grid) */
+.content-image .photo-grid {
+  column-count: 2;        /* two columns instead of 3 */
+  column-gap: 15px;
+  width: 100%;
+}
+
+.content-image .photo-grid img {
+  width: 100%;
+  display: block;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  object-fit: contain;    /* keeps aspect ratio */
+  break-inside: avoid;    /* prevents column breaks mid-image */
+}
 /* =======================
    RESPONSIVE STACKING
    ======================= */
