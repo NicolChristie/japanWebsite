@@ -39,4 +39,18 @@ function setActiveLink() {
       link.classList.remove("active");
     }
   });
+
+  document.addEventListener("click", (e) => {
+  const isDropBtn = e.target.matches(".dropbtn");
+  if (!isDropBtn && e.target.closest(".dropdown") == null) {
+    document.querySelectorAll(".dropdown-content").forEach(d => d.style.display = "none");
+  }
+
+  if (isDropBtn) {
+    const dropdownContent = e.target.nextElementSibling;
+    dropdownContent.style.display =
+      dropdownContent.style.display === "block" ? "none" : "block";
+  }
+});
+
 }
