@@ -132,7 +132,7 @@ button {
    ======================= */
 h1 { font-family: Andale mono, monospace; text-align: center; font-size: 80px; color: black; }
 h2 { font-family: Andale Mono, monospace; font-size: 50px; color: black; }
-h3 { font-family: Andale Mono, monospace; font-size: 30px; color: black; margin-left: 55px; }
+h3 { font-family: Andale Mono, monospace; font-size: 30px; color: black; }
 h4 { font-family: Andale Mono, monospace; font-size: 20px; text-align: left; color: black; }
 h5 { font-family: Andale Mono, monospace; font-size: 20px; text-align: center; color: black; margin-top: -40px; }
 ul, ol, li, p, a {
@@ -141,6 +141,9 @@ ul, ol, li, p, a {
   color: black;
 }
 a:hover { text-decoration: underline; color: darkred; }
+
+div.b{ text-align: center; }
+div.c{margin-left: 200px;}
 
 /* =======================
    CONTENT CONTAINERS
