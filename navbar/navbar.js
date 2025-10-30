@@ -1,7 +1,11 @@
+
 // Loads the shared navbar into any page that includes this script
 document.addEventListener("DOMContentLoaded", () => {
-  fetch("navbar.html")
-    .then(response => response.text())
+  fetch("/navbar/navbar.html") // absolute path from root
+    .then(response => {
+      if (!response.ok) throw new Error("Navbar not found");
+      return response.text();
+    })
     .then(data => {
       document.getElementById("navbar-container").innerHTML = data;
       setActiveLink(); // call after navbar is inserted
@@ -39,13 +43,23 @@ function setActiveLink() {
 
 // Mobile dropdown click toggle
 function setupMobileDropdowns() {
-  const dropdowns = document.querySelectorAll(".topnav.responsive .dropdown .dropbtn");
+  document.addEventListener("click", (e) => {
+    const topnav = document.getElementById("myTopnav");
 
-  dropdowns.forEach(btn => {
-    btn.addEventListener("click", e => {
-      e.preventDefault();
-      const parentDropdown = btn.parentElement;
-      parentDropdown.classList.toggle("active"); // show/hide dropdown content via CSS
-    });
+    // Only handle clicks when in responsive (mobile) mode
+    if (topnav.classList.contains("responsive")) {
+      const isDropBtn = e.target.matches(".dropbtn");
+
+      if (!isDropBtn && e.target.closest(".dropdown") == null) {
+        document.querySelectorAll(".dropdown-content").forEach(d => d.style.display = "none");
+      }
+
+      if (isDropBtn) {
+        e.preventDefault();
+        const dropdownContent = e.target.nextElementSibling;
+        dropdownContent.style.display =
+          dropdownContent.style.display === "block" ? "none" : "block";
+      }
+    }
   });
 }
