@@ -1,8 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Determine the correct path to navbar.html
-  const depth = window.location.pathname.split("/").length - 2; // number of subfolders
-  const prefix = "../".repeat(depth); // go up folders as needed
-  const navbarPath = `${prefix}navbar/navbar.html`;
+  const navbarPath = "/navbar/navbar.html";
 
   fetch(navbarPath)
     .then(response => {
