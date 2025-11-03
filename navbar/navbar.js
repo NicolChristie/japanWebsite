@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   console.log("🟢 DOMContentLoaded triggered");
 
-  const navbarPath = "/navbar/navbar.html";
+  const navbarPath = "/japanWebsite/navbar/navbar.html";
   console.log("📁 Attempting to load navbar from:", navbarPath);
 
   // Check if container exists before fetch
