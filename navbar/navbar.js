@@ -1,13 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
   const navbarPath = "/japanWebsite/navbar/navbar.html";
-
-  // Check if container exists before fetch
   const container = document.getElementById("navbar-container");
-  if (!container) {
-    
-    return;
-  } else {
-  }
+
+  if (!container) return;
 
   fetch(navbarPath)
     .then(response => {
@@ -15,32 +10,19 @@ document.addEventListener("DOMContentLoaded", () => {
       return response.text();
     })
     .then(data => {
-
       container.innerHTML = data;
-
-      // Double-check navbar loaded
-      const topnav = document.getElementById("myTopnav");
-      console.log("⚙️ Running setup functions...");
       setActiveLink();
       setupMobileDropdowns();
-    })
+    });
 });
 
-function myFunction() {
-  const x = document.getElementById("myTopnav")
-  x.classList.toggle("responsive");
-}
-
 function setActiveLink() {
-
   const currentPage = window.location.pathname.split("/").pop();
-
-
   const links = document.querySelectorAll("#myTopnav a");
 
   links.forEach(link => {
     const linkPage = link.getAttribute("href");
-    if (linkPage && currentPage && linkPage.includes(currentPage)) {
+    if (linkPage && linkPage.includes(currentPage)) {
       link.classList.add("active");
       const parentDropdown = link.closest(".dropdown");
       if (parentDropdown) {
@@ -54,17 +36,16 @@ function setActiveLink() {
 }
 
 function setupMobileDropdowns() {
-  const dropdowns = document.querySelectorAll(".dropdown .dropbtn");
+  const dropdownButtons = document.querySelectorAll(".dropdown .dropbtn");
 
-  if (dropdowns.length === 0) {
-    return;
-  }
-
-  dropdowns.forEach(btn => {
+  dropdownButtons.forEach(btn => {
     btn.addEventListener("click", e => {
-      e.preventDefault();
-      const parentDropdown = btn.parentElement;
-      parentDropdown.classList.toggle("active");
+      // only toggle if we're on mobile
+      if (window.innerWidth <= 1000) {
+        e.preventDefault();
+        const parent = btn.parentElement;
+        parent.classList.toggle("active");
+      }
     });
   });
 }
