@@ -93,31 +93,48 @@
 /* =======================
    RESPONSIVE MOBILE
    ======================= */
+/* =======================
+   RESPONSIVE MOBILE
+   ======================= */
 @media screen and (max-width: 1000px) {
-  .topnav a:not(:first-child),
-  .dropdown .dropbtn { display: none; }
+  /* Hide everything except the hamburger initially */
+  .topnav a,
+  .dropdown .dropbtn {
+    display: none;
+  }
 
+  /* Hamburger icon visible and moved to LEFT */
   .topnav a.icon {
-    float: right;
+    float: left;
     display: block;
+    color: white; /* visible against red/black */
+    padding: 20px;
+    font-size: 22px;
   }
 
+  /* Keep navbar fixed and remove gap when opened */
   .topnav.responsive {
-    position: relative;
-  }
-
-  .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
+    position: fixed;
     top: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    z-index: 1000;
   }
 
-  .topnav.responsive a {
-    float: none;
+  /* Expanded mobile menu layout */
+  .topnav.responsive a,
+  .topnav.responsive .dropdown .dropbtn {
     display: block;
+    float: none;
     text-align: left;
+    width: 100%;
+    padding: 20px; /* bigger tap area */
+    font-size: 18px;
+    border-top: 1px solid #222;
   }
 
+  /* Dropdowns expand vertically */
   .topnav.responsive .dropdown {
     float: none;
     width: 100%;
@@ -125,20 +142,29 @@
 
   .topnav.responsive .dropdown-content {
     position: relative;
+    background-color: #222;
   }
 
+  /* Dropdown button visible when expanded */
   .topnav.responsive .dropdown .dropbtn {
     display: block;
     width: 100%;
     text-align: left;
+    background-color: black;
+    color: #f2f2f2;
   }
 
-  /* Show dropdown on click for mobile */
+  /* Show dropdown on click (toggle .active in JS) */
   .topnav.responsive .dropdown-content {
     display: none;
   }
 
   .topnav.responsive .dropdown.active .dropdown-content {
     display: block;
+  }
+
+  /* Remove Home from top bar and put inside menu */
+  .topnav a.home-link {
+    display: block !important;
   }
 }
