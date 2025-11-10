@@ -19,5 +19,12 @@
 
 <!-- Load navbar logic -->
   <script src="navbar/navbar.js" defer></script>
+    <script>
+window.addEventListener('scroll', () => {
+  const scrollTop = window.scrollY;
+  const parallaxSpeed = -0.1; 
+  document.body.style.backgroundPosition = `center ${scrollTop * parallaxSpeed}px`;
+});
+</script>
 </body>
 </html>

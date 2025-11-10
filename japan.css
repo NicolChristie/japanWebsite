@@ -7,9 +7,10 @@ body {
   padding-top: 60px; /* space for fixed navbar */
   background-image: url("images/websiteBackground.png");
   background-size: cover;
-  background-position: top right;
+  background-position: center top;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: fixed; /* creates parallax illusion */
+  background-blend-mode: normal;
 }
 
 /* =======================
