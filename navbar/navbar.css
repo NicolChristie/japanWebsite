@@ -91,80 +91,43 @@
 }
 
 /* =======================
-   RESPONSIVE MOBILE
-   ======================= */
-/* =======================
-   RESPONSIVE MOBILE
+   MOBILE (same layout as desktop)
    ======================= */
 @media screen and (max-width: 1000px) {
-  /* Hide everything except the hamburger initially */
+  /* Keep the layout same as desktop */
   .topnav a,
-  .dropdown .dropbtn {
-    display: none;
-  }
-
-  /* Hamburger icon visible and moved to LEFT */
-  .topnav a.icon {
+  .dropdown {
     float: left;
     display: block;
-    color: white; /* visible against red/black */
-    padding: 20px;
-    font-size: 22px;
   }
 
-  /* Keep navbar fixed and remove gap when opened */
-  .topnav.responsive {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: black;
-    z-index: 1000;
-  }
-
-  /* Expanded mobile menu layout */
-  .topnav.responsive a,
-  .topnav.responsive .dropdown .dropbtn {
-    display: block;
-    float: none;
-    text-align: left;
-    width: 100%;
-    padding: 20px; /* bigger tap area */
-    font-size: 18px;
-    border-top: 1px solid #222;
-  }
-
-  /* Dropdowns expand vertically */
-  .topnav.responsive .dropdown {
-    float: none;
-    width: 100%;
-  }
-
-  .topnav.responsive .dropdown-content {
-    position: relative;
-    background-color: #222;
-  }
-
-  /* Dropdown button visible when expanded */
-  .topnav.responsive .dropdown .dropbtn {
-    display: block;
-    width: 100%;
-    text-align: left;
-    background-color: black;
-    color: #f2f2f2;
-  }
-
-  /* Show dropdown on click (toggle .active in JS) */
-  .topnav.responsive .dropdown-content {
+  /* Hide hover-open on mobile (we’ll use click) */
+  .dropdown:hover .dropdown-content {
     display: none;
   }
 
-  .topnav.responsive .dropdown.active .dropdown-content {
-    display: block;
+  /* Dropdowns still positioned below buttons */
+  .dropdown-content {
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.3);
+    z-index: 1001;
   }
 
-  /* Remove Home from top bar and put inside menu */
-  .topnav a.home-link {
-    display: block !important;
+  /* Hide hamburger icon entirely */
+  .topnav a.icon {
+    display: none !important;
+  }
+
+  /* Ensure tap targets are large enough */
+  .topnav a,
+  .dropdown .dropbtn {
+    padding: 14px 16px;
+  }
+
+  /* Show dropdown when active via JS */
+  .dropdown.active .dropdown-content {
+    display: block;
   }
 }

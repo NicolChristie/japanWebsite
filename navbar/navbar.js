@@ -41,17 +41,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-function myFunction() {
-  console.log("📱 myFunction() called — toggling responsive class");
-  const x = document.getElementById("myTopnav");
-  if (!x) {
-    console.error("❌ ERROR: #myTopnav not found when toggling responsive menu!");
-    return;
-  }
-  x.classList.toggle("responsive");
-  console.log("✅ Responsive class toggled");
-}
-
 function setActiveLink() {
   console.log("🔗 Running setActiveLink()");
   const currentPage = window.location.pathname.split("/").pop();
