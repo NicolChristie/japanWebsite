@@ -123,7 +123,8 @@
   /* Ensure tap targets are large enough */
   .topnav a,
   .dropdown .dropbtn {
-    padding: 14px 16px;
+    font-size: 20px;          /* Bigger readable text */
+    padding: 22px 24px;       /* Larger tap area */
   }
 
   /* Show dropdown when active via JS */
