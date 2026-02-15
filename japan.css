@@ -154,7 +154,8 @@ div.c{margin-left: 200px;}
    RESPONSIVE STACKING
     ======================= */
     @media (max-width: 1000px) {
-
+      h3 { font-size: 30px; }
+      p, li, a { font-size: 20px; }
       /* Stack sections vertically */
       .content-container,
       .content-container.card {
