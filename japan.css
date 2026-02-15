@@ -153,7 +153,7 @@ div.c{margin-left: 200px;}
 /* =======================
    RESPONSIVE STACKING
     ======================= */
-    @media (max-width: 1000px) {
+    @media (max-width: 1200px) {
       h3 { font-size: 30px; }
       p, li, a { font-size: 25px; }
       /* Stack sections vertically */
