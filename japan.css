@@ -160,6 +160,11 @@ div.c{margin-left: 200px;}
       .content-container.card {
         flex-direction: column;
         align-items: stretch;
+    
+        width: 95%;              /* 👈 wider boxes */
+        max-width: 95%;
+        margin: 30px auto;       /* 👈 more outer breathing room */
+        padding: 20px;           /* slight increase but not huge */
       }
     
       /* FULL WIDTH image container */
@@ -168,7 +173,7 @@ div.c{margin-left: 200px;}
         width: 100%;
         max-width: 100%;
         flex: none;
-        margin-top: 20px;
+        margin-top: 25px;
       }
     
       .content-list {
@@ -178,14 +183,14 @@ div.c{margin-left: 200px;}
       /* Keep collage style but readable */
       .photo-grid,
       .content-image .photo-grid {
-        column-count: 2;   /* 👈 collage preserved */
-        column-gap: 12px;
+        column-count: 2;
+        column-gap: 15px;
         width: 100%;
       }
     
       .photo-grid img {
         width: 100%;
-        margin-bottom: 12px;
+        margin-bottom: 15px;
       }
     }
     
