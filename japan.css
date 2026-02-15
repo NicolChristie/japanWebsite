@@ -155,17 +155,17 @@ div.c{margin-left: 200px;}
     ======================= */
     @media (max-width: 1200px) {
       h3 { font-size: 30px; }
-      p, li, a { font-size: 25px; }
+      p, li, a { font-size: 50px; }
       /* Stack sections vertically */
       .content-container,
       .content-container.card {
         flex-direction: column;
         align-items: stretch;
     
-        width: 95%;              /* 👈 wider boxes */
+        width: 95%;             
         max-width: 95%;
-        margin: 30px auto;       /* 👈 more outer breathing room */
-        padding: 20px;           /* slight increase but not huge */
+        margin: 30px auto;       
+        padding: 20px;          
       }
     
       /* FULL WIDTH image container */
