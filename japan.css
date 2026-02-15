@@ -198,29 +198,42 @@ div.c{margin-left: 200px;}
     /* =======================
    IMAGE LIGHTBOX
    ======================= */
+   
+  /* =======================
+   IMAGE LIGHTBOX
+   ======================= */
 
-   #lightbox {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.92);
-    display: none;
-    overflow-y: auto;     /* allow scroll inside lightbox */
-    z-index: 9999;
-    cursor: zoom-out;
-    padding: 40px 20px;   /* breathing room */
-  }
-  
-  #lightbox img {
-    display: block;
-    margin: 0 auto;       /* center horizontally only */
-    max-width: 95%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 0 40px rgba(0,0,0,0.7);
-    animation: zoomIn 0.25s ease;
-  }
+#lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.92);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  cursor: zoom-out;
+  padding: 20px;
+}
+
+#lightbox img {
+  max-width: 95%;
+  max-height: 95%;
+  border-radius: 10px;
+  box-shadow: 0 0 40px rgba(0,0,0,0.7);
+  animation: zoomIn 0.25s ease;
+}
 
 @keyframes zoomIn {
   from { transform: scale(0.9); opacity: 0; }
   to   { transform: scale(1); opacity: 1; }
+}
+
+/* Make images look clickable */
+img {
+  cursor: zoom-in;
+  transition: transform 0.2s ease;
+}
+
+img:hover {
+  transform: scale(1.02);
 }
