@@ -77,10 +77,10 @@ div.c{margin-left: 200px;}
   display: flex;
   align-items: center;
   gap: 20px;
-  width: 80%;
-  max-width: 1500px;
+  width: 90%;
+  max-width: 1600px;
   margin: 20px auto;
-  padding: 20px;
+  padding: 15px;
   box-sizing: border-box;
   justify-content: flex-start;
 }
@@ -152,29 +152,40 @@ div.c{margin-left: 200px;}
 }
 /* =======================
    RESPONSIVE STACKING
-   ======================= */
-@media (max-width: 1000px) {
-    body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  padding-top: 60px; /* space for fixed navbar */
-  background-image: url("images/websiteBackground.png");
-  background-size: cover;
-  background-position: top right;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-  .content-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
+    ======================= */
+    @media (max-width: 1000px) {
 
-  .content-image img {
-    width: 100%;
-    max-width: 100%;
-    margin: 10px 0;
-  }
-
-  div.c{margin-left: 100px;}
-}
+      /* Stack sections vertically */
+      .content-container,
+      .content-container.card {
+        flex-direction: column;
+        align-items: stretch;
+      }
+    
+      /* FULL WIDTH image container */
+      .content-image,
+      .content-image:has(.photo-grid) {
+        width: 100%;
+        max-width: 100%;
+        flex: none;
+        margin-top: 20px;
+      }
+    
+      .content-list {
+        width: 100%;
+      }
+    
+      /* Keep collage style but readable */
+      .photo-grid,
+      .content-image .photo-grid {
+        column-count: 2;   /* 👈 collage preserved */
+        column-gap: 12px;
+        width: 100%;
+      }
+    
+      .photo-grid img {
+        width: 100%;
+        margin-bottom: 12px;
+      }
+    }
+    
