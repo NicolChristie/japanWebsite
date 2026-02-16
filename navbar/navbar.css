@@ -18,7 +18,7 @@
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 25px;
 }
 
 .topnav a:hover {
@@ -43,7 +43,7 @@
 
 /* Dropdown button */
 .dropdown .dropbtn {
-  font-size: 17px;
+  font-size: 25px;
   border: none;
   outline: none;
   color: #f2f2f2;
@@ -61,7 +61,7 @@
   top: 100%;
   left: 0;
   background-color: #333;
-  min-width: 160px;
+  min-width: 200px;
   box-shadow: 0px 8px 16px rgba(0,0,0,0.3);
   z-index: 1001;
 }
@@ -93,7 +93,7 @@
 /* =======================
    MOBILE (same layout as desktop)
    ======================= */
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
   /* Keep the layout same as desktop */
   .topnav a,
   .dropdown {
@@ -123,7 +123,7 @@
   /* Ensure tap targets are large enough */
   .topnav a,
   .dropdown .dropbtn {
-    font-size: 20px;          /* Bigger readable text */
+    font-size: 30px;          /* Bigger readable text */
     padding: 22px 24px;       /* Larger tap area */
   }
 
