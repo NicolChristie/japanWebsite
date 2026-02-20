@@ -117,18 +117,20 @@ div.c{margin-left: 200px;}
    PHOTO GRID
    ======================= */
 .photo-grid {
-  column-count: 3;       /* number of columns */
+  column-count: 4;       /* number of columns */
   column-gap: 20px;
   width: 80%;
-  max-width: 1500px;
+  max-width: 2000px;
   margin: 40px auto;
 }
 
-.photo-grid img {
-  width: 100%;           /* fit column width */
-  margin-bottom: 10px;   /* spacing between images vertically */
+.photo-grid img,
+.photo-grid video {
+  width: 100%;       /* same visual height */
+  object-fit: cover;      /* crops nicely */
   border-radius: 10px;
   display: block;
+  margin-bottom: 15px;
 }
 .content-image:has(.photo-grid) {
   flex: 0 0 45%;      /* take up less space */
